@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myMusic</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<style>
+    .color-black{
+        color:black;
+    }
+
+    .marLeft{
+      margin-left: 80px;
+    }
+
+    #favorite-album{
+      text-align: center;
+      margin-left:20px;
+      margin-top:50px;
+    
+    }
+
+    #best-fav{
+      margin-left:120px;
+      margin-top:40px;
+      max-width: 900px;
+    }
+
+    #best-fav img{
+      width:400px;
+      height:400px;
+    }
+
+    table{
+      max-width:900px ;
+      margin-left:70px;
+    }
+
+    #myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color:rgb(13, 115, 146); 
+    color: white; 
+    cursor: pointer; 
+    padding: 5px; 
+    border-radius: 5%; 
+    font-size: 23px;
+    
+    }
+
+    #myBtn:hover {
+    background-color: #555; 
+    }
+</style>
+
+</head>
+<body>
+    
+        <nav class="navbar navbar-dark sticky-top bg-secondary flex-md-nowrap p-0 shadow">
+          <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#"><i class="bi bi-headphones"></i> myMusic</a>
+          <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+          <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+              <a class="nav-link" href="#">Sign up</a>
+            </li>
+          </ul>
+        </nav>
+
+        
+        <div class="container-fluid">
+          <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+              <div class="sidebar-sticky pt-3">
+                <ul class="nav flex-column ">
+                  <li class="nav-item">
+                    <a class="nav-link color-black" href="#about">
+                      About me
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link color-black" href="#favorite">
+                      My Picks
+                    </a>
+                  </li>
+                
+                </ul>
+        
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                  <span>Go to</span>
+                  
+                </h6>
+                <ul class="nav flex-column mb-2">
+                  <li class="nav-item">
+                    <a class="nav-link color-black" href="https://music.apple.com/us/browse" target="_blank">
+                        <i class="bi bi-music-note-beamed"></i> 
+                      Apple Music
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link color-black" href="https://www.spotify.com/de/" target="_blank">
+                        <i class="bi bi-spotify"></i> 
+                      Spotify
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link color-black" href="https://www.youtube.com/" target="_blank">
+                        <i class="bi bi-youtube"></i> 
+                      Youtube
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+
+            <main role="main">
+
+                <section class="jumbotron bg-white text-center">
+                  <div class="container">
+                    <h1>All Albums</h1>
+                    <p class="lead text-muted"> check out these music albums throughout the years, from my personal picks</p>
+                    <p>
+                      <a href="#favorite" class="btn btn-info my-2">go to my favorite picks</a>
+                      <a href="#notFavorite" class="btn btn-secondary my-2">go to hall of shame</a>
+                    </p>
+                  </div>
+                </section>
+
+              
+                <div class="album marLeft">
+                    <div class="container">
+              
+                        <div class="row">
+
+                            <div class="col-6 col-md-4 col-xl-3">
+                                <div class="card mb-4 shadow-sm">
+                                    <img src="https://uploads-ssl.webflow.com/6129fadb6077b654d63e39c7/612b5e4f8914696a730b27ae_LEA_FLUSS_COVER_315x315mm_2021_06_29.jpg" class="card-img-top" alt="lea">
+              
+                                    <div class="card-body">
+                                        <p class="card-text">Fluss</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                
+                                            <small class="text-muted">LEA</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-xl-3">
+                                <div class="card mb-4 shadow-sm">
+                                    <img src="https://is4-ssl.mzstatic.com/image/thumb/Music115/v4/bc/13/27/bc13275c-8b26-802d-771b-d15ae00fb530/mzm.hvpwjsvi.jpg/486x486bb.png" class="card-img-top" alt="sia">
+              
+                                    <div class="card-body">
+                                        <p class="card-text">This is acting</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                
+                                            <small class="text-muted">Sia</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-xl-3">
+                                <div class="card mb-4 shadow-sm">
+                                    <img src="https://is4-ssl.mzstatic.com/image/thumb/Music125/v4/ba/31/55/ba3155b3-4c11-909c-1e32-8acea6f77ac4/00042284690829.rgb.jpg/486x486bb.png" class="card-img-top" alt="scorpions">
+              
+                                    <div class="card-body">
+                                        <p class="card-text"> Crazy World </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                
+                                            <small class="text-muted">Scorpions</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-xl-3">
+                                <div class="card mb-4 shadow-sm">
+                                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1e/cf/97/1ecf9739-cd02-8e8f-77d8-165b2d560f95/17UM1IM32471.rgb.jpg/486x486bb.png" class="card-img-top" alt="maroon5">
+              
+                                    <div class="card-body">
+                                        <p class="card-text"> Jordi </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                
+                                            <small class="text-muted">Maroon 5</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-xl-3">
+                              <div class="card mb-4 shadow-sm">
+                                  <img src="https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/ec/67/7c/ec677cd4-04f9-79e9-9f8a-18f175fcb06f/20UM1IM15751.rgb.jpg/486x486bb.png" class="card-img-top" alt="ellie goulding">
+            
+                                  <div class="card-body">
+                                      <p class="card-text"> Brightest Blue </p>
+                                      <div class="d-flex justify-content-between align-items-center">
+                              
+                                          <small class="text-muted">Ellie Goulding</small>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is4-ssl.mzstatic.com/image/thumb/Music115/v4/3b/22/4d/3b224dad-38e5-fee8-e067-a32e5837cf97/5099968084257.jpg/486x486bb.png" class="card-img-top" alt="pink floyd">
+          
+                                <div class="card-body">
+                                    <p class="card-text"> Wish You Were Here </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                            
+                                        <small class="text-muted">Pink Floyd</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is3-ssl.mzstatic.com/image/thumb/Music/68/81/4f/mzi.wrtaopaz.jpg/486x486bb.png" class="card-img-top" alt="Kelly Clarkson">
+          
+                                <div class="card-body">
+                                    <p class="card-text"> Stronger </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                            
+                                        <small class="text-muted">Kelly Clarkson</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/05/05/5d/05055d03-fa2b-1848-75a4-6b626477937c/mzi.icapguzh.jpg/600x600bf-60.jpg" class="card-img-top" alt="Kansas">
+        
+                                <div class="card-body">
+                                    <p class="card-text"> Point of Know Return</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                          
+                                      <small class="text-muted">Kansas</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is2-ssl.mzstatic.com/image/thumb/Music115/v4/de/d4/f4/ded4f4be-a037-557e-e2ac-866455e6b268/886443736474.jpg/1200x1200bf-60.jpg" class="card-img-top" alt="pink">
+        
+                                <div class="card-body">
+                                    <p class="card-text">The Truth About Love</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                          
+                                      <small class="text-muted">Pink</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/8b/70/b8/8b70b880-530a-b86a-c0fe-05fc26745e71/06UMGIM05509.rgb.jpg/1200x1200bf-60.jpg" class="card-img-top" alt="Bryan Adams">
+        
+                                <div class="card-body">
+                                    <p class="card-text"> So Far So Good</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                          
+                                      <small class="text-muted">Bryan Adams</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/96/9b/d8/969bd840-2623-9385-81a6-2ee655e0447a/asset.jpg/1200x1200bf-60.jpg" class="card-img-top" alt="girls generation">
+        
+                                <div class="card-body">
+                                    <p class="card-text"> Into the new world </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                          
+                                      <small class="text-muted">Girls' Generation</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is5-ssl.mzstatic.com/image/thumb/Music115/v4/a3/c9/2b/a3c92b78-b9b0-544f-c581-45428cdbd67d/14UMGIM44520.rgb.jpg/486x486bb.png" class="card-img-top" alt="bon jovi">
+        
+                                <div class="card-body">
+                                    <p class="card-text"> Crush </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                          
+                                      <small class="text-muted">Bon Jovi</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/46/2a/b9/462ab96e-8501-4c08-98cb-3d97052ee9d2/634904074050.png/600x600bf-60.jpg" class="card-img-top" alt="Adele">
+        
+                                <div class="card-body">
+                                    <p class="card-text">25 </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                          
+                                      <small class="text-muted">Adele</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is4-ssl.mzstatic.com/image/thumb/Music62/v4/d6/93/12/d6931221-a61e-71a4-bef2-5527bb63e1e5/dj.kbicaaqp.jpg/486x486bb.png" class="card-img-top" alt="tim bendzko">
+        
+                                <div class="card-body">
+                                    <p class="card-text">Immer noch Mensch </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                          
+                                      <small class="text-muted">Tim Bendzko</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a0/61/a0/a061a0c8-1974-8658-d062-39e7db50fb1f/00028948180226.rgb.jpg/1200x1200bf-60.jpg" class="card-img-top" alt="Our Planet">
+        
+                                <div class="card-body">
+                                    <p class="card-text"> Our Planet </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                          
+                                      <small class="text-muted">Steven Price, Ellie Goulding</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/36/11/d5/3611d5ee-eb88-2539-b52f-f593c710e9a6/4050538274080.jpg/486x486bb.png" class="card-img-top" alt="the cranberries">
+        
+                                <div class="card-body">
+                                    <p class="card-text"> Something Else </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                          
+                                      <small class="text-muted">The Cranberries</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is2-ssl.mzstatic.com/image/thumb/Music115/v4/eb/d7/22/ebd72202-973d-e7e8-1560-3a8f8f50293f/14UMGIM15933.rgb.jpg/486x486bb.png" class="card-img-top" alt="glasperlenspiel">
+        
+                                <div class="card-body">
+                                    <p class="card-text">Grenzenlos</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                          
+                                      <small class="text-muted">Glasperlenspiel</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is5-ssl.mzstatic.com/image/thumb/Music124/v4/ae/98/4c/ae984c7a-cd06-a7cd-e8bf-32cb15ba698d/00602567705475.rgb.jpg/1200x1200bf-60.jpg" class="card-img-top" alt="the beatles">
+        
+                                <div class="card-body">
+                                    <p class="card-text">Let it be</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                          
+                                      <small class="text-muted">The Beatles</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/ec/7b/e1/ec7be14e-e011-1f8a-9a32-59ef378482c6/mzi.uvfjworw.jpg/1200x1200bf-60.jpg" class="card-img-top" alt="Eric Clapton">
+        
+                                <div class="card-body">
+                                    <p class="card-text"> Rush </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                          
+                                      <small class="text-muted">Eric Clapton</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 col-md-4 col-xl-3">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://is4-ssl.mzstatic.com/image/thumb/Music125/v4/32/41/fe/3241fe70-3529-2060-7212-48cd0cccbe6e/11UMGIM19347.rgb.jpg/486x486bb.png" class="card-img-top" alt="gotye">
+        
+                                <div class="card-body">
+                                    <p class="card-text"> Making Mirrors </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                          
+                                      <small class="text-muted"> Gotye</small>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <!-- Favorite pics -->
+
+                <section>
+
+                  <section id="favorite" class="jumbotron bg-white text-center">
+                    <div  class="container">
+                      <h1>Favorite Picks</h1>
+                      <p class="lead text-muted"> some favorite songs and album that i enjoy </p>
+  
+                    </div>
+                  </section>
+  
+                
+                  <div class="album">
+                    <div class="container ">
+                        <div class="row mx-auto">
+
+                            <div class="card mb-3 mr-5" style="max-width: 500px;">
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <img src="https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/fa/52/dd/fa52ddb2-730b-c79d-4b6d-9590a9d75e52/pr_source.png/800x800cc.jpg" class="card-img" alt="sia">
+                                </div>
+                                <div class="col-lg-6">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Never Give Up</h5>
+                                    <p class="card-text">Artist: Sia</p>
+                                    <p class="card-text">Genre: Electropop ballad</p>
+                                    <p class="card-text">Length: 3.41 </p>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card mb-3 mr-5" style="max-width: 500px;">
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <img src="https://static.qobuz.com/images/covers/83/32/0060075343283_600.jpg" class="card-img" alt="scorpions">
+                                </div>
+                                <div class="col-lg-6">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Wind of Change</h5>
+                                    <p class="card-text">Artist: Scorpions</p>
+                                    <p class="card-text">Genre: Hard rock/metal</p>
+                                    <p class="card-text">Length: 5.13 </p>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card mb-3 mr-5" style="max-width: 500px;">
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <img src="http://images.genius.com/51bdfd3ece1d6bd2238996fb4f97b59b.640x640x1.jpg" class="card-img" alt="Tim Bendzko">
+                                </div>
+                                <div class="col-lg-6">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Keine Maschine</h5>
+                                    <p class="card-text">Artist: Tim Bendzko</p>
+                                    <p class="card-text">Genre: Pop</p>
+                                    <p class="card-text">Length: 3.20 </p>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card mb-3 mr-5" style="max-width: 500px;">
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Kansas-dust-in-the-wind.jpg" class="card-img" alt="Kansas">
+                                </div>
+                                <div class="col-lg-6">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Dust in The Wind</h5>
+                                    <p class="card-text">Artist: Kansas</p>
+                                    <p class="card-text">Genre: Rock</p>
+                                    <p class="card-text">Length: 3.27 </p>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+  
+                            
+
+                        </div>
+                    </div>  
+                  </div>
+
+                  <div id="favorite-album">
+                      <h4>Best Favorite Album</h4>
+
+                      <div id="best-fav" class="card mb-3 mr-4">
+                        <div class="row">
+                          <div>
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a0/61/a0/a061a0c8-1974-8658-d062-39e7db50fb1f/00028948180226.rgb.jpg/1200x1200bf-60.jpg" class="card-img" alt="scorpions">
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="card-body">
+                              <h5 class="card-title">Our Planet</h5>
+                              <p class="card-text">Artist: Steven Price, Ellie Goulding</p>
+                              <p class="card-text">Genre: Classical Stage & Screen</p>
+                              <p class="card-text">Length: 146 minutes </p>
+                              <p class="card-text"><small class="text-muted"> This album is composed by Steven Price. <br> The soundtrack was released with a compilation of the incidental music specially commissioned for Our Planet (a Netflix documentary). The theme song "In This Together", which is a collaboration with English singer and songwriter Ellie Goulding, is also included. </small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                    <div class="container">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Length</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>This Is Our Planet</td>
+                            <td>3:43</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>The Numbers Build</td>
+                            <td>5:04</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>They Work As A Team</td>
+                            <td>3:41</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>In This Together</td>
+                            <td>4:43</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>The Next Twenty Years</td>
+                            <td>1:41</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>A Greater Resilience</td>
+                            <td>4:02</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>Crucial To Their Survival</td>
+                            <td>7:25</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>Where Life Gathers</td>
+                            <td>3:20</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>The Ocean Returns The Favour</td>
+                            <td>2:20</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">10</th>
+                            <td>Too Big To Argue With</td>
+                            <td>5:35</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">11</th>
+                            <td>We Must Preserve What's Left</td>
+                            <td>2:28</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">12</th>
+                            <td>The Perfect Gift</td>
+                            <td>2:53</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                </section>
+
+                  <!-- hall of shame -->
+
+                  <section>
+                    <section id="notFavorite" class="jumbotron bg-white text-center">
+                      <div class="container">
+                        <h1>Hall of shame</h1>
+                        <p class="lead text-muted"> some songs that i prefer to not listen to</p>
+    
+                      </div>
+                    </section>
+
+                    <div class="album">
+                      <div class="container ">
+                          <div class="row mx-auto">
+  
+                              <div class="card mb-3 mr-5" style="max-width: 500px;">
+                                <div class="row">
+                                  <div class="col-lg-6">
+                                    <img src="https://is4-ssl.mzstatic.com/image/thumb/Music124/v4/9d/c8/f1/9dc8f17e-4003-2fc7-0904-362bb973ccdf/00602557530957.rgb.jpg/1200x1200bf-60.jpg" class="card-img" alt="despacito">
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Despacito</h5>
+                                      <p class="card-text">Artist: Luis Fonsi</p>
+                                      <p class="card-text">Genre: Raggaeton, Latin pop</p>
+                                      <p class="card-text">Length: 3.47 </p>
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+  
+                              <div class="card mb-3 mr-5" style="max-width: 500px;">
+                                <div class="row">
+                                  <div class="col-lg-6">
+                                    <img src="https://www.xclusivepop.com/wp-content/uploads/2020/05/Justin-Bieber-Baby-ft.-Ludacris.jpg" class="card-img" alt="">
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Baby</h5>
+                                      <p class="card-text">Artist: Justin Bieber ft Ludacris</p>
+                                      <p class="card-text">Genre: Pop</p>
+                                      <p class="card-text">Length: 3.31 </p>
+                                      <!-- <p class="card-text"><small class="text-muted">Year released:1990 </small></p> -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+  
+                              <div class="card mb-3 mr-5" style="max-width: 500px;">
+                                <div class="row">
+                                  <div class="col-lg-6">
+                                    <img src="https://i1.wp.com/hypebeast.com/image/ht/2014/08/nicki-minaj-anaconda-2.png?w=960" class="card-img" alt="">
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Anaconda</h5>
+                                      <p class="card-text">Artist: Nicki Minaj</p>
+                                      <p class="card-text">Genre: Hip-Hop/Rap</p>
+                                      <p class="card-text">Length: 2.56 </p>
+                                      <!-- <p class="card-text"><small class="text-muted">Year released:1990 </small></p> -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+  
+                              <div class="card mb-3 mr-5" style="max-width: 500px;">
+                                <div class="row">
+                                  <div class="col-lg-6">
+                                    <img src="https://preview.redd.it/pb36gtr5ycuy.jpg?auto=webp&s=c038f0654482b569d6606e3f8211a811217ae97b" class="card-img" alt="">
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <div class="card-body">
+                                      <h5 class="card-title">I'm the one</h5>
+                                      <p class="card-text">Artist: DJ Khaled</p>
+                                      <p class="card-text">Genre: Hip-Hop/Rap</p>
+                                      <p class="card-text">Length: 4.48 </p>
+                                      <!-- <p class="card-text"><small class="text-muted">Year released:1990 </small></p> -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+    
+                              
+  
+                          </div>
+                      </div>  
+                    </div>
+    
+                  
+                    
+                  </section>
+            </main>
+
+            <aside>
+                
+                <div id="about" class="jumbotron">
+                  <h3>About me</h3>
+                  <p>For me music is not the most important thing in my life but I enjoy listening to musics. It’s a nice thing to have but if I don’t have it, or if it’s not available, I won’t fret about it. I also don’t have particular favorite genre, I listen to all of them. Good lyrics are always captivating my attention, so i think lyrics are what’s most important for me when it comes to music. And when i say “good”, doesn’t mean it’s poetic, it’s just I find them meaningful or inspiring or related to my life. </p>
+                </div>
+                
+            </aside>
+
+            <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-chevron-up"></i></button>
+
+<script>
+               
+mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+    
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+  </body>
+</html>
