@@ -32,13 +32,14 @@
     }
 
     #best-fav img{
-      width:400px;
-      height:400px;
+      margin-top: 8px;
+      width:300px;
+      height:300px;
     }
 
     table{
       max-width:900px ;
-      margin-left:70px;
+      margin-left:80px;
     }
 
     #myBtn {
@@ -74,7 +75,7 @@
           <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
           <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-              <a class="nav-link" href="#">Sign up</a>
+              <button onclick="myFunction()">Hide/Show</button>
             </li>
           </ul>
         </nav>
@@ -126,7 +127,7 @@
             </nav>
 
 
-            <main role="main">
+            <main role="main" id="mainPage">
 
                 <section class="jumbotron bg-white text-center">
                   <div class="container">
@@ -445,15 +446,15 @@
   
                 
                   <div class="album">
-                    <div class="container ">
+                    <div class="container collapse">
                         <div class="row mx-auto">
 
                             <div class="card mb-3 mr-5" style="max-width: 500px;">
                               <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-12 col-lg-6">
                                   <img src="https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/fa/52/dd/fa52ddb2-730b-c79d-4b6d-9590a9d75e52/pr_source.png/800x800cc.jpg" class="card-img" alt="sia">
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-12 col-lg-6">
                                   <div class="card-body">
                                     <h5 class="card-title">Never Give Up</h5>
                                     <p class="card-text">Artist: Sia</p>
@@ -467,10 +468,10 @@
 
                             <div class="card mb-3 mr-5" style="max-width: 500px;">
                               <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-12 col-lg-6">
                                   <img src="https://static.qobuz.com/images/covers/83/32/0060075343283_600.jpg" class="card-img" alt="scorpions">
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-12 col-lg-6">
                                   <div class="card-body">
                                     <h5 class="card-title">Wind of Change</h5>
                                     <p class="card-text">Artist: Scorpions</p>
@@ -484,10 +485,10 @@
 
                             <div class="card mb-3 mr-5" style="max-width: 500px;">
                               <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-12 col-lg-6">
                                   <img src="http://images.genius.com/51bdfd3ece1d6bd2238996fb4f97b59b.640x640x1.jpg" class="card-img" alt="Tim Bendzko">
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-12 col-lg-6">
                                   <div class="card-body">
                                     <h5 class="card-title">Keine Maschine</h5>
                                     <p class="card-text">Artist: Tim Bendzko</p>
@@ -501,10 +502,10 @@
 
                             <div class="card mb-3 mr-5" style="max-width: 500px;">
                               <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-12 col-lg-6">
                                   <img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Kansas-dust-in-the-wind.jpg" class="card-img" alt="Kansas">
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-12 col-lg-6">
                                   <div class="card-body">
                                     <h5 class="card-title">Dust in The Wind</h5>
                                     <p class="card-text">Artist: Kansas</p>
@@ -522,15 +523,15 @@
                     </div>  
                   </div>
 
-                  <div id="favorite-album">
+                  <div id="favorite-album" >
                       <h4>Best Favorite Album</h4>
 
                       <div id="best-fav" class="card mb-3 mr-4">
                         <div class="row">
-                          <div>
+                          <div class="col-12 col-lg-6">
                             <img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a0/61/a0/a061a0c8-1974-8658-d062-39e7db50fb1f/00028948180226.rgb.jpg/1200x1200bf-60.jpg" class="card-img" alt="scorpions">
                           </div>
-                          <div class="col-lg-6">
+                          <div class="col-12 col-lg-6">
                             <div class="card-body">
                               <h5 class="card-title">Our Planet</h5>
                               <p class="card-text">Artist: Steven Price, Ellie Goulding</p>
@@ -621,9 +622,13 @@
 
                 </section>
 
+                <!-- <p>
+                  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Hide this section</a>
+                </p> -->
+
                   <!-- hall of shame -->
 
-                  <section>
+                  <section class="mb-5">
                     <section id="notFavorite" class="jumbotron bg-white text-center">
                       <div class="container">
                         <h1>Hall of shame</h1>
@@ -638,10 +643,10 @@
   
                               <div class="card mb-3 mr-5" style="max-width: 500px;">
                                 <div class="row">
-                                  <div class="col-lg-6">
+                                  <div class="col-12 col-lg-6">
                                     <img src="https://is4-ssl.mzstatic.com/image/thumb/Music124/v4/9d/c8/f1/9dc8f17e-4003-2fc7-0904-362bb973ccdf/00602557530957.rgb.jpg/1200x1200bf-60.jpg" class="card-img" alt="despacito">
                                   </div>
-                                  <div class="col-lg-6">
+                                  <div class="col-12 col-lg-6">
                                     <div class="card-body">
                                       <h5 class="card-title">Despacito</h5>
                                       <p class="card-text">Artist: Luis Fonsi</p>
@@ -655,10 +660,10 @@
   
                               <div class="card mb-3 mr-5" style="max-width: 500px;">
                                 <div class="row">
-                                  <div class="col-lg-6">
+                                  <div class="col-12 col-lg-6">
                                     <img src="https://www.xclusivepop.com/wp-content/uploads/2020/05/Justin-Bieber-Baby-ft.-Ludacris.jpg" class="card-img" alt="">
                                   </div>
-                                  <div class="col-lg-6">
+                                  <div class="col-12 col-lg-6">
                                     <div class="card-body">
                                       <h5 class="card-title">Baby</h5>
                                       <p class="card-text">Artist: Justin Bieber ft Ludacris</p>
@@ -672,10 +677,10 @@
   
                               <div class="card mb-3 mr-5" style="max-width: 500px;">
                                 <div class="row">
-                                  <div class="col-lg-6">
+                                  <div class="col-12 col-lg-6">
                                     <img src="https://i1.wp.com/hypebeast.com/image/ht/2014/08/nicki-minaj-anaconda-2.png?w=960" class="card-img" alt="">
                                   </div>
-                                  <div class="col-lg-6">
+                                  <div class="col-12 col-lg-6">
                                     <div class="card-body">
                                       <h5 class="card-title">Anaconda</h5>
                                       <p class="card-text">Artist: Nicki Minaj</p>
@@ -689,10 +694,10 @@
   
                               <div class="card mb-3 mr-5" style="max-width: 500px;">
                                 <div class="row">
-                                  <div class="col-lg-6">
+                                  <div class="col-12 col-lg-6">
                                     <img src="https://preview.redd.it/pb36gtr5ycuy.jpg?auto=webp&s=c038f0654482b569d6606e3f8211a811217ae97b" class="card-img" alt="">
                                   </div>
-                                  <div class="col-lg-6">
+                                  <div class="col-12 col-lg-6">
                                     <div class="card-body">
                                       <h5 class="card-title">I'm the one</h5>
                                       <p class="card-text">Artist: DJ Khaled</p>
@@ -742,6 +747,16 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0; 
   document.documentElement.scrollTop = 0;
+}
+
+
+function myFunction() {
+  var x = document.getElementById("mainPage");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
 </script>
 
